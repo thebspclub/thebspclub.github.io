@@ -1,0 +1,319 @@
+
+
+/*
+	RE_INVIGORATE
+	Author: Sean McNamara
+	Contact: sean at reinvigorate dot net
+*/
+
+var szReHost = "stats.reinvigorate.net";
+var iRePort = 80;
+
+var iUniqueCookieExpires = 86400;
+var iReturnCookieExpires = 86400*365*5;
+
+//var iUniqueCookieExpires = 2;  // * temp *
+//var iReturnCookieExpires = 86400*365;  // * temp *
+
+var iWid = 0;
+var iScriptVersion = 2;
+var szUserAgent = navigator.userAgent.toLowerCase();
+var szBrowser;
+var szBrowserVersion;
+var szOperatingSystem;
+var szReferrer;
+var szUrl;
+var bUnique = 0;
+var iScreen = 0;
+var iInnerScreen = 0;
+var iTimezone = 0;
+var bCookies = 0;
+var aKeys = Array();
+var aVals = Array();
+
+function re_get(szStr)
+{
+	return szUserAgent.indexOf(szStr) + 1;
+}
+
+
+function re_getVersion(szKey)
+{	
+	if (!((indx = szUserAgent.indexOf(szKey+" ")) >= 0 || (indx = szUserAgent.indexOf(szKey+"/")) >= 0))
+		return "";
+		
+	szUserAgent = szUserAgent.substring(indx + szKey.length + 1);
+	
+	if (szUserAgent.charAt(0) == "v")
+		szUserAgent = szUserAgent.substring(1);
+	
+	szBuffer = "";
+	for (cnt=0;cnt<szUserAgent.length;cnt++)
+	{
+		cr = szUserAgent.charAt(cnt);
+		if ((cr >= 0 && cr <= 9) || cr == ".")
+			szBuffer += cr;
+		else
+			break;
+	}
+	
+	return szBuffer;
+}
+
+
+function re_setBrowser(szB, szBV)
+{
+	szBrowser = szB;
+	szBrowserVersion = szBV;
+}
+
+function re_cookieExists(name)
+{
+	return ((document.cookie.indexOf(name + "=") == -1) ? false : true);
+}
+
+function re_getCookie(name)
+{
+	cook = document.cookie;
+	
+	
+	if (cook == "")
+		return false;
+		
+	iBegin = cook.indexOf(name + "=");
+	
+	if (iBegin == -1)
+		return false;
+		
+	iEnd = cook.substring(iBegin).indexOf(";");
+	
+	if (iEnd == -1)
+		return unescape(cook.substring(iBegin + name.length + 1));
+	
+	szTemp = cook.substring(iBegin + name.length + 1);
+
+	return unescape(szTemp.substring(0,szTemp.indexOf(";")));
+}
+
+function re_setCookie(name, value, expiresInSeconds)
+{
+	date = new Date();
+	date.setTime(date.getTime() + (expiresInSeconds*1000));
+	
+	if (expiresInSeconds == undefined)
+		document.cookie = name + "=" + escape(value);
+	else
+		document.cookie = name + "=" + escape(value) + "; expires=" + date.toGMTString();
+}
+
+function re_track(szUA)
+{
+	szUserAgent = szUA;
+	
+	szBrowser = szBrowserVersion = szOperatingSystem = "";
+
+	if (re_get("konqueror"))
+	{
+		re_setBrowser("Konqueror",re_getVersion("konqueror"));
+	} else if (re_get("safari"))
+	{
+		re_setBrowser("Safari",re_getVersion("safari"));
+	}  else if (re_get("opera"))
+	{
+		re_setBrowser("Opera",re_getVersion("opera"));
+	} else if (re_get("webtv"))
+	{
+		re_setBrowser("WebTV",re_getVersion("webtv"));
+	} else if (re_get("firefox"))
+	{
+		re_setBrowser("FireFox",re_getVersion("firefox"));
+	} else if (re_get("msie"))
+	{
+		re_setBrowser("Internet Explorer",re_getVersion("msie"));
+	} else if (re_get("omniweb"))
+	{	
+		re_setBrowser("OmniWeb",re_getVersion("omniweb"));
+	} else if (re_get("netscape"))
+	{
+		re_setBrowser("Netscape",re_getVersion("netscape"));
+	} else if (!re_get("compatible"))
+	{
+		versn = detect.charAt(8);
+		
+		if (versn != '2' || versn != '3')
+			versn = "";
+
+		if (document.layers)
+			versn = 4;
+	
+		re_setBrowser("Netscape Navigator",  versn);
+	}
+
+	szUserAgent = szUA;
+
+	if(re_get("sunos"))
+		szOperatingSystem = "SunOS";
+	else if (re_get("freebsd") || re_get("openbsd"))
+		szOperatingSystem = "BSD";
+	else if (re_get("linux"))
+		szOperatingSystem = "Linux";
+	else if (re_get("mac") || re_get("ppc"))
+		szOperatingSystem = "Mac";
+	else if (re_get("x11"))
+		szOperatingSystem = "UNIX";
+	else if (re_get("win"))
+		szOperatingSystem = "Windows";
+	
+	if (szBrowser == "")
+		szBrowser = "Unknown";
+		
+	if (szBrowserVersion == "")
+		szBrowserVersion = "Unknown";
+		
+	if (szOperatingSystem == "")
+		szOperatingSystem = "Unknown";
+		
+	if (screen)
+		iScreen = screen.width | screen.height << 16;
+		
+	if (window.innerWidth)
+		iInnerScreen = window.innerWidth | window.innerHeight << 16;
+	else if (document.body)
+		iInnerScreen = document.body.clientWidth | document.body.clientHeight << 16;
+		
+		
+		
+	if (!re_cookieExists("re_ire"))
+		re_setCookie("re_ire",0,iReturnCookieExpires);
+	else if (!re_getCookie("re_ise"))
+		re_setCookie("re_ire",parseInt(re_getCookie("re_ire")) + 1,iReturnCookieExpires);
+	
+	if (!re_getCookie("re_ise"))
+	{
+		re_setCookie("re_ise",Math.floor(Math.random()*Math.pow(2,31)),iUniqueCookieExpires);
+		re_setCookie("re_isi",1,iUniqueCookieExpires);
+		bUnique = 1;
+	} else
+	{
+		re_setCookie("re_isi",parseInt(re_getCookie("re_isi")) + 1,iUniqueCookieExpires);
+	}
+	
+	if (document.cookie)
+		bCookies = 1;
+	
+	if (parent.document.referrer != undefined && bUnique)
+		szReferrer = parent.document.referrer + "";
+	else
+		szReferrer = document.referrer + "";
+		
+	szUrl = window.location + "";
+	
+	szReferrer = szReferrer.substring(0,150);
+	szUrl = szUrl.substring(0,150);
+	
+	iTimezone = -(new Date()).getTimezoneOffset()/60 + 12;
+	
+	if ((new Date()).getMonth() >= 3 && (new Date()).getMonth() <= 9)
+		if (iTimezone <= 0)
+			iTimezone--;
+		else
+			iTimezone++;
+	
+	/*document.write("Script Version: " + iScriptVersion + "<br>");
+	document.write("Website ID: " + iWid + "<br>");
+	document.write("Session: " + re_getCookie("re_ise") + "<br>");
+	document.write("SessionIndex: " + re_getCookie("re_isi") + "<br>");
+	document.write("Unique: " + bUnique + "<br>");
+	document.write("Return: " + re_getCookie("re_ire") + "<br>");
+	document.write("Url: " + szUrl + "<br>");
+	document.write("Referrer: " + szReferrer + "<br>");
+	document.write("Browser: " + szBrowser + "<br>");
+	document.write("Version: " + szBrowserVersion + "<br>");
+	document.write("OS: " + szOperatingSystem + "<br>");
+	document.write("Cookies: " + bCookies + "<br>");
+	document.write("Screen: " + (iScreen & 65535) + "x" + (iScreen >> 16 & 65535) + "<br>");
+	document.write("InnerScreen: " + (iInnerScreen & 65535) + "x" + (iInnerScreen >> 16 & 65535) + "<br>");
+	document.write("Timezone: " + iTimezone + "<br>");*/
+	
+	
+	
+	
+	
+	
+	
+	
+	aKeys.push("wid");
+	aVals.push(iWid);
+	
+	aKeys.push("ses");
+	aVals.push(re_getCookie("re_ise"));
+	
+	aKeys.push("opts");
+	aVals.push(iScriptVersion | (parseInt(re_getCookie("re_isi")) << 4) | (parseInt(re_getCookie("re_ire"))  << 17) | (bUnique << 25) | (bCookies << 26) | (iTimezone << 27));
+	
+	aKeys.push("url");
+	aVals.push(szUrl);
+	
+	aKeys.push("ref");
+	aVals.push(szReferrer);
+	
+	aKeys.push("bwr");
+	aVals.push(szBrowser);
+	
+	aKeys.push("bwrv");
+	aVals.push(szBrowserVersion);
+	
+	aKeys.push("os");
+	aVals.push(szOperatingSystem);
+	
+	aKeys.push("res");
+	aVals.push(iScreen);
+	
+	aKeys.push("ires");
+	aVals.push(iInnerScreen);
+	
+	aKeys.push("rnd");
+	aVals.push(Math.floor(Math.random()*Math.pow(2,32)));
+	
+	
+	/*document.write("<p>");
+	for (cnt=0;cnt<aKeys.length;cnt++)
+	{
+		document.write("(" + cnt + ")" + aKeys[cnt] + " = '" + aVals[cnt] + "'" + "<br>");
+	}*/
+	
+	
+	var szBuf = "";
+	for (cnt=0;cnt<aKeys.length;cnt++)
+		szBuf += escape(aKeys[cnt]) + "=" + escape(aVals[cnt]) + "&";
+		
+	szBuf = szBuf.substring(0,szBuf.length-1);
+	
+	/*document.write("<p>");
+	document.write(szBuf);
+	document.write("<p>");
+	document.write("script language=\"JavaScript\" src=\"http://" + szReHost + ":" + iRePort + "/rserver/?" + szBuf + "\"");*/
+	
+	
+	document.write("<script language=\"JavaScript\" src=\"http://" + szReHost + ":" + iRePort + "/rserver/?" + szBuf + "\"></script>");
+
+	aKeys.length = 0;
+	aVals.length = 0;
+}
+
+function reinvigorate_detect(w)
+{
+	iWid = w;
+	re_track(szUserAgent);
+}
+
+
+
+reinvigorate_detect(2887);
+
+
+
+//for (x=0;x<20;x++)
+//	reinvigorate_detect(2887);
+
+
