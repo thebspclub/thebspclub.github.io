@@ -1,0 +1,715 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html><head>
+
+
+
+<!-- base href="http://collective.valve-erc.com/" -->
+
+	<title>VERC · func_tank (Half-Life)</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	<style>
+	<!-- 
+	p, td, body { font-family: Verdana; font-size: 11px; }
+	a { color: #6a0000; }
+	a.side { text-decoration: none; }
+	a.side:hover { background: #ddddcc; }
+	.menu { color: #f79e83; font-size: 10px; text-decoration: none; }
+	.form1 { font-family: Verdana; font-size: 10px; background: #EEEEEE; border: Solid 1px #808080; }
+	.button1 { font-family: Verdana; font-size: 10px; }
+	-->
+	</style>
+	<script language="JavaScript" src="func_tank_files/common.js"></script>
+</head><body leftmargin="0" topmargin="0" onload="javascript:window.name='collective';" text="#333333" vlink="#333333" alink="#8888ff" background="func_tank_files/a.html" bgcolor="#9c0000" link="#6a0000" marginwidth="0">
+
+<table width="752" align="center" border="0" cellpadding="0" cellspacing="0" height="100%">
+<tbody><tr>
+	<td width="1" bgcolor="#f76b63" height="100%"><img src="func_tank_files/null.gif" alt="" width="0" border="0" height="0"></td>
+	<td valign="top" width="750" align="left" bgcolor="#840000" height="100%">
+
+		<map name="header">
+		<area alt="" coords="0,0,254,60" href="http://web.archive.org/web/20041113171251/http://collective.valve-erc.com/">
+		<area alt="" coords="590,0,750,60" href="http://web.archive.org/web/20041113171251/http://www.speakeasy.net/">
+		</map>
+
+		<!-- title and banner -->
+		<table width="100%" bgcolor="#faf9e5" border="0" cellpadding="0" cellspacing="0">
+		<tbody><tr>
+			<td valign="middle" width="750" align="center"><img src="func_tank_files/spkz_banner07.jpg" usemap="#header" width="750" border="0" height="60"></td>
+		</tr>
+		</tbody></table>	
+		
+		<!-- menu -->
+		<table width="100%" border="0" cellpadding="0" cellspacing="0">
+		<tbody><tr>
+			<td valign="middle" height="20">
+			<span class="menu">&nbsp;
+	<a href="http://web.archive.org/web/20041113171251/http://collective.valve-erc.com/index.php" class="menu">home</a> · 
+	<a href="http://web.archive.org/web/20041113171251/http://collective.valve-erc.com/index.php?area=resindex" class="menu">browse</a> · 
+	<a href="http://web.archive.org/web/20041113171251/http://collective.valve-erc.com/index.php?area=search" class="menu">search</a> · 
+	<a href="http://web.archive.org/web/20041113171251/http://collective.valve-erc.com/index.php?area=entity" class="menu">game entities</a> · 
+	<a href="http://web.archive.org/web/20041113171251/http://collective.valve-erc.com/index.php?area=directory" class="menu">user directory</a> · 
+	<a href="http://web.archive.org/web/20041113171251/http://collective.valve-erc.com/index.php?area=forums" class="menu">message board</a> · 
+	<a href="http://web.archive.org/web/20041113171251/http://collective.valve-erc.com/index.php?area=irc" class="menu">IRC</a> | 
+	<a href="http://web.archive.org/web/20041113171251/http://collective.valve-erc.com/index.php?area=register" class="menu">register</a>
+	</span>
+			</td>
+		</tr>
+		<tr bgcolor="#333333">
+			<td height="1"><img src="func_tank_files/null.gif" alt="" width="0" border="0" height="0"></td>
+		</tr>
+		<tr>
+			<td height="10"><img src="func_tank_files/null.gif" alt="" width="0" border="0" height="0"></td>
+		</tr>
+		</tbody></table>
+
+		<table width="100%" border="0" cellpadding="0" cellspacing="0">
+		<tbody><tr>
+			<td width="10"><img src="func_tank_files/null.gif" alt="" width="0" border="0" height="0"></td>
+			<td valign="top" width="200" align="left">
+			
+				<table width="100%" bgcolor="#333333" border="0" cellpadding="0" cellspacing="1"><tbody><tr><td>
+				<table width="100%" bgcolor="#ffffef" border="0" cellpadding="0" cellspacing="5">
+				<tbody><tr>
+					<td>
+					
+		
+	<p></p><form action="/index.php" method="post" name="login_form" id="login_form">
+	<input name="area" value="viewentity" type="hidden">
+	<input name="news" value="" type="hidden">
+	<input name="doc" value="" type="hidden">
+	<input name="blog" value="" type="hidden">
+	<table width="100%" border="0" cellpadding="0" cellspacing="2">
+	<tbody><tr>
+		<td colspan="2"><sup>November 13, 2004, 9:12 am PST</sup></td>
+	</tr>
+	<tr>
+		<td align="right" nowrap="nowrap">username&nbsp;&nbsp;</td>
+		<td width="100%"><input name="username" class="form1" style="width: 100%;" type="text"></td>
+	</tr>
+	<tr>
+		<td align="right" nowrap="nowrap">password&nbsp;&nbsp;</td>
+		<td width="100%"><input name="password" class="form1" style="width: 100%;" type="password"></td>
+	</tr>
+	<tr>
+		<td colspan="2" align="right">
+				
+		<table width="100%" border="0" cellpadding="0" cellspacing="0">
+		<tbody><tr>
+			<td align="center"><a href="http://web.archive.org/web/20041113171251/http://collective.valve-erc.com/index.php?area=forgot" class="side">forgot password?</a></td>
+			<td align="right"><input name="action" value="login" class="button1" type="submit"></td>
+		</tr>
+		</tbody></table>
+		
+		</td>
+	</tr>
+	</tbody></table>
+	<script language="JavaScript">
+	<!--
+		document.login_form.username.focus()
+	//-->
+	</script>
+	</form><p></p>
+	
+	
+	
+	
+	
+					</td>
+				</tr>
+				</tbody></table>
+				</td></tr></tbody></table>
+
+				<table width="100%" border="0" cellpadding="0" cellspacing="0">
+				<tbody><tr>
+					<td height="10"><img src="func_tank_files/null.gif" alt="" width="0" border="0" height="0"></td>
+				</tr>
+				</tbody></table>
+				
+				<table width="100%" bgcolor="#555555" border="0" cellpadding="0" cellspacing="1"><tbody><tr><td>
+				<table width="100%" bgcolor="#ffffef" border="0" cellpadding="0" cellspacing="5">
+				<tbody><tr>
+					<td>
+					
+	<table width="100%" bgcolor="#c0c0c0" border="0" cellpadding="1" cellspacing="0"><tbody><tr><td>
+	<table width="100%" bgcolor="#eeeedd" border="0" cellpadding="5" cellspacing="0">
+	<tbody><tr>
+		<td>
+		<strong>Popular Resources</strong><br>
+		<li> <a href="http://web.archive.org/web/20041113171251/http://collective.valve-erc.com/index.php?go=source_mod_faq"><strong>Half-Life 2 Mod FAQ</strong></a>
+		</li><li> <a href="http://web.archive.org/web/20041113171251/http://collective.valve-erc.com/index.php?go=hammer"><strong>Valve Hammer Editor</strong></a>
+		</li><li> <a href="http://web.archive.org/web/20041113171251/http://collective.valve-erc.com/index.php?go=hammer_beta"><strong>Hammer 3.5 beta test</strong></a>
+		</li><li> <a href="http://web.archive.org/web/20041113171251/http://collective.valve-erc.com/index.php?doc=1047496381-02062100">Half-Life Utilities</a>
+		</li><li> <a href="http://web.archive.org/web/20041113171251/http://dev.valve-erc.com/?go=fgd" target="new">game data files</a>
+		</li><li> <a href="http://web.archive.org/web/20041113171251/http://collective.valve-erc.com/index.php?go=mhlt">ZHLT 2.5.3 custom build</a>
+		</li><li> <a href="http://web.archive.org/web/20041113171251/http://dev.valve-erc.com/?go=hl_sdk" target="new">Half-Life SDK</a><br>
+		</li></td>
+	</tr>
+	</tbody></table>
+	</td></tr></tbody></table>
+
+	<table border="0" cellpadding="0" cellspacing="0">
+	<tbody><tr>
+		<td height="5"><img src="func_tank_files/null.gif" alt="" width="0" border="0" height="0"></td>
+	</tr>
+	</tbody></table>
+
+	<table width="100%" bgcolor="#c0c0c0" border="0" cellpadding="1" cellspacing="0"><tbody><tr><td>
+	<table width="100%" bgcolor="#eeeedd" border="0" cellpadding="5" cellspacing="0">
+	<tbody><tr>
+		<td>
+		<strong>Feedback</strong><br>
+		If you've got any feedback, suggestions, or bugs to report regarding the Collective website, <a href="http://web.archive.org/web/20041113171251/http://collective.valve-erc.com/index.php/?go=feedback">go here</a>!<br>
+		<br>
+		<li> <a href="http://web.archive.org/web/20041113171251/http://collective.valve-erc.com/index.php/?go=feedback">Feedback</a> (207)
+		</li></td>
+	</tr>
+	</tbody></table>
+	</td></tr></tbody></table>
+
+	<p></p><form action="http://web.archive.org/web/20041113171251/http://collective.valve-erc.com/index.php"><strong>Newsletter</strong><br>
+	<input name="area" value="newsletter" type="hidden">
+	<table width="100%" border="0" cellpadding="0" cellspacing="0">
+	<tbody><tr>
+		<td width="100%"><input name="email" class="form1" style="width: 100%;" type="text"></td>
+		<td nowrap="nowrap">&nbsp;<input name="" value="set" class="button1" type="submit"></td>
+	</tr>
+	</tbody></table>
+	<span style="font-size: 10px; color: rgb(128, 128, 128);">Enter your email address in the above form to add yourself to the email newsletter list.  Click <a href="http://web.archive.org/web/20041113171251/http://collective.valve-erc.com/index.php?area=newsletter">here</a> for more info.</span></form><p></p>
+	
+					</td>
+				</tr>
+				</tbody></table>
+				</td></tr></tbody></table>
+
+				<table width="100%" border="0" cellpadding="0" cellspacing="0">
+				<tbody><tr>
+					<td height="10"><img src="func_tank_files/null.gif" alt="" width="0" border="0" height="0"></td>
+				</tr>
+				</tbody></table>
+				
+				<table width="100%" bgcolor="#555555" border="0" cellpadding="0" cellspacing="1"><tbody><tr><td>
+				<table width="100%" bgcolor="#ffffef" border="0" cellpadding="0" cellspacing="5">
+				<tbody><tr>
+					<td>
+					
+	<table width="100%" bgcolor="#c0c0c0" border="0" cellpadding="1" cellspacing="0"><tbody><tr><td>
+	<table width="100%" bgcolor="#eeeedd" border="0" cellpadding="5" cellspacing="0">
+	<tbody><tr>
+		<td>
+		<strong>Hosted Sites</strong><br>
+		<li> <a href="http://web.archive.org/web/20041113171251/http://www.valve-erc.com/" style="text-decoration: none;">Valve ERC</a>
+		</li><li> <a href="http://web.archive.org/web/20041113171251/http://collective.valve-erc.com/" style="text-decoration: none;"><strong>Collective</strong></a>
+		</li><li> <a href="http://web.archive.org/web/20041113171251/http://tf.valve-erc.com/" style="text-decoration: none;">TFMapped</a>
+		</li><li> <a href="http://web.archive.org/web/20041113171251/http://spirit.valve-erc.com/" style="text-decoration: none;">Spirit of Half-Life</a>
+		</li><li> <a href="http://web.archive.org/web/20041113171251/http://ns.valve-erc.com/" style="text-decoration: none;">Selective Design</a>
+		</li><li> <a href="http://web.archive.org/web/20041113171251/http://pixel.valve-erc.com/" style="text-decoration: none;">Pixel Reviews</a>
+		</li></td>
+	</tr>
+	</tbody></table>
+	</td></tr></tbody></table>
+	
+					</td>
+				</tr>
+				</tbody></table>
+				</td></tr></tbody></table>
+
+				<table width="100%" border="0" cellpadding="0" cellspacing="0">
+				<tbody><tr>
+					<td height="10"><img src="func_tank_files/null.gif" alt="" width="0" border="0" height="0"></td>
+				</tr>
+				</tbody></table>
+				
+				<table width="100%" bgcolor="#555555" border="0" cellpadding="0" cellspacing="1"><tbody><tr><td>
+				<table width="100%" bgcolor="#ffffef" border="0" cellpadding="0" cellspacing="5">
+				<tbody><tr>
+					<td>
+					
+		<p align="center"><strong>recent articles</strong>
+		<table border="0" cellpadding="0" cellspacing="0">
+		<tbody><tr>
+			<td height="5"><img src="func_tank_files/null.gif" alt="" width="0" border="0" height="0"></td>
+		</tr>
+		</tbody></table>
+		
+						<table width="100%" bgcolor="#c0c0c0" border="0" cellpadding="1" cellspacing="0"><tbody><tr><td>
+						<table width="100%" bgcolor="#eeeedd" border="0" cellpadding="5" cellspacing="0">
+						<tbody><tr>
+							<td>
+							<p><strong><a href="http://web.archive.org/web/20041113171251/http://collective.valve-erc.com/index.php?doc=1092932859-33776100">Hiding in Shadow</a></strong><br>
+							<span style="font-size: 9px; color: rgb(128, 128, 128);"><em>21/08/04 01:11pm PDT</em></span><br>
+Describes how to create a function that has monsters disregard you if
+you are hiding in a certain level of "darkness," which can be set from
+within map properties.<br>
+							<span style="font-size: 9px; color: rgb(128, 128, 128);"><em>- Anders [Wolf] Jenbo (NoBody)</em></span><br>
+							</p>
+							</td>
+						</tr>
+						</tbody></table>
+						</td></tr></tbody></table>
+
+						<table border="0" cellpadding="0" cellspacing="0">
+						<tbody><tr>
+							<td height="5"><img src="func_tank_files/null.gif" alt="" width="0" border="0" height="0"></td>
+						</tr>
+						</tbody></table>
+						
+						<table width="100%" bgcolor="#c0c0c0" border="0" cellpadding="1" cellspacing="0"><tbody><tr><td>
+						<table width="100%" bgcolor="#eeeedd" border="0" cellpadding="5" cellspacing="0">
+						<tbody><tr>
+							<td>
+							<p><strong><a href="http://web.archive.org/web/20041113171251/http://collective.valve-erc.com/index.php?doc=1093930497-20765600">XSI EXP for Half-Life 2 Tutorial - Camera Control</a></strong><br>
+							<span style="font-size: 9px; color: rgb(128, 128, 128);"><em>23/09/04 12:43am PDT</em></span><br>
+							A SOFTIMAGE|XSI tutorial explaining all of the camera controls available to you in XSI!<br>
+							<span style="font-size: 9px; color: rgb(128, 128, 128);"><em>- Josh Enes</em></span><br>
+							</p>
+							</td>
+						</tr>
+						</tbody></table>
+						</td></tr></tbody></table>
+
+						<table border="0" cellpadding="0" cellspacing="0">
+						<tbody><tr>
+							<td height="5"><img src="func_tank_files/null.gif" alt="" width="0" border="0" height="0"></td>
+						</tr>
+						</tbody></table>
+						
+						<table width="100%" bgcolor="#c0c0c0" border="0" cellpadding="1" cellspacing="0"><tbody><tr><td>
+						<table width="100%" bgcolor="#eeeedd" border="0" cellpadding="5" cellspacing="0">
+						<tbody><tr>
+							<td>
+							<p><strong><a href="http://web.archive.org/web/20041113171251/http://collective.valve-erc.com/index.php?doc=1091469531-97736200">Bump Mapping in Half-Life</a></strong><br>
+							<span style="font-size: 9px; color: rgb(128, 128, 128);"><em>08/08/04 11:58am PDT</em></span><br>
+							Details a method of achieving real-time bump mapping in Half-Life, and provides an implementation of the algorithm.<br>
+							<span style="font-size: 9px; color: rgb(128, 128, 128);"><em>- Francis 'DeathWish' Woodhouse</em></span><br>
+							</p>
+							</td>
+						</tr>
+						</tbody></table>
+						</td></tr></tbody></table>
+
+						<table border="0" cellpadding="0" cellspacing="0">
+						<tbody><tr>
+							<td height="5"><img src="func_tank_files/null.gif" alt="" width="0" border="0" height="0"></td>
+						</tr>
+						</tbody></table>
+						
+						<table width="100%" bgcolor="#c0c0c0" border="0" cellpadding="1" cellspacing="0"><tbody><tr><td>
+						<table width="100%" bgcolor="#eeeedd" border="0" cellpadding="5" cellspacing="0">
+						<tbody><tr>
+							<td>
+							<p><strong><a href="http://web.archive.org/web/20041113171251/http://collective.valve-erc.com/index.php?go=tron2">Real-Time "TRON 2.0" Glow For Low-Spec Hardware</a></strong><br>
+							<span style="font-size: 9px; color: rgb(128, 128, 128);"><em>19/06/04 02:06pm PDT</em></span><br>
+A sequel to the original "Real-Time 'TRON 2.0' Glow" article, this
+describes how to implement real-time glow that works on low-spec
+graphics cards.<br>
+							<span style="font-size: 9px; color: rgb(128, 128, 128);"><em>- Francis 'DeathWish' Woodhouse</em></span><br>
+							</p>
+							</td>
+						</tr>
+						</tbody></table>
+						</td></tr></tbody></table>
+
+						<table border="0" cellpadding="0" cellspacing="0">
+						<tbody><tr>
+							<td height="5"><img src="func_tank_files/null.gif" alt="" width="0" border="0" height="0"></td>
+						</tr>
+						</tbody></table>
+						
+						<table width="100%" bgcolor="#c0c0c0" border="0" cellpadding="1" cellspacing="0"><tbody><tr><td>
+						<table width="100%" bgcolor="#eeeedd" border="0" cellpadding="5" cellspacing="0">
+						<tbody><tr>
+							<td>
+							<p><strong><a href="http://web.archive.org/web/20041113171251/http://collective.valve-erc.com/index.php?doc=1081522672-30622600">Hitboxes and Code</a></strong><br>
+							<span style="font-size: 9px; color: rgb(128, 128, 128);"><em>05/06/04 06:25pm PDT</em></span><br>
+How do I make only one part of a monster take damage? Learn about the
+relationship between model hitboxes and what you can do with them in a
+characters code.<br>
+							<span style="font-size: 9px; color: rgb(128, 128, 128);"><em>- Jonathan 'Teh_Freak' Smith</em></span><br>
+							</p>
+							</td>
+						</tr>
+						</tbody></table>
+						</td></tr></tbody></table>
+
+						<table border="0" cellpadding="0" cellspacing="0">
+						<tbody><tr>
+							<td height="5"><img src="func_tank_files/null.gif" alt="" width="0" border="0" height="0"></td>
+						</tr>
+						</tbody></table>
+						
+						<table width="100%" bgcolor="#c0c0c0" border="0" cellpadding="1" cellspacing="0"><tbody><tr><td>
+						<table width="100%" bgcolor="#eeeedd" border="0" cellpadding="5" cellspacing="0">
+						<tbody><tr>
+							<td>
+							<p><strong><a href="http://web.archive.org/web/20041113171251/http://collective.valve-erc.com/index.php?doc=1083484325-81541000">Gib Item List</a></strong><br>
+							<span style="font-size: 9px; color: rgb(128, 128, 128);"><em>05/06/04 08:44pm PDT</em></span><br>
+Ever need a simple item for your map, like a roll of duct tape or a
+screwdriver? Well, use gib models instead of making them from brushes!
+This list details most of the useful gib models for adding that final
+touch to your map. <br>
+							<span style="font-size: 9px; color: rgb(128, 128, 128);"><em>- Spencer 'RabidMonkey' Rose</em></span><br>
+							</p>
+							</td>
+						</tr>
+						</tbody></table>
+						</td></tr></tbody></table>
+
+						<table border="0" cellpadding="0" cellspacing="0">
+						<tbody><tr>
+							<td height="5"><img src="func_tank_files/null.gif" alt="" width="0" border="0" height="0"></td>
+						</tr>
+						</tbody></table>
+						
+						<table width="100%" bgcolor="#c0c0c0" border="0" cellpadding="1" cellspacing="0"><tbody><tr><td>
+						<table width="100%" bgcolor="#eeeedd" border="0" cellpadding="5" cellspacing="0">
+						<tbody><tr>
+							<td>
+							<p><strong><a href="http://web.archive.org/web/20041113171251/http://collective.valve-erc.com/index.php?go=tron1">Real-Time "TRON 2.0" Glow in Half-Life</a></strong><br>
+							<span style="font-size: 9px; color: rgb(128, 128, 128);"><em>15/04/04 12:30pm PDT</em></span><br>
+							Describes how to implement an image-space glow effect into Half-Life using vertex and pixel shaders.<br>
+							<span style="font-size: 9px; color: rgb(128, 128, 128);"><em>- Francis 'DeathWish' Woodhouse</em></span><br>
+							</p>
+							</td>
+						</tr>
+						</tbody></table>
+						</td></tr></tbody></table>
+
+						<table border="0" cellpadding="0" cellspacing="0">
+						<tbody><tr>
+							<td height="5"><img src="func_tank_files/null.gif" alt="" width="0" border="0" height="0"></td>
+						</tr>
+						</tbody></table>
+						
+						<table width="100%" bgcolor="#c0c0c0" border="0" cellpadding="1" cellspacing="0"><tbody><tr><td>
+						<table width="100%" bgcolor="#eeeedd" border="0" cellpadding="5" cellspacing="0">
+						<tbody><tr>
+							<td>
+							<p><strong><a href="http://web.archive.org/web/20041113171251/http://collective.valve-erc.com/index.php?doc=1080824567-17005800">Texture Alignment on Curves</a></strong><br>
+							<span style="font-size: 9px; color: rgb(128, 128, 128);"><em>03/04/04 01:43pm PST</em></span><br>
+							Learn how to easily align textures evenly across curves. Also includes Vertex Manipulation and Align to View tool tips. <br>
+							<span style="font-size: 9px; color: rgb(128, 128, 128);"><em>- Andrew "KungFuSquirrel" Weldon</em></span><br>
+							</p>
+							</td>
+						</tr>
+						</tbody></table>
+						</td></tr></tbody></table>
+
+						<table border="0" cellpadding="0" cellspacing="0">
+						<tbody><tr>
+							<td height="5"><img src="func_tank_files/null.gif" alt="" width="0" border="0" height="0"></td>
+						</tr>
+						</tbody></table>
+						
+						<table width="100%" bgcolor="#c0c0c0" border="0" cellpadding="1" cellspacing="0"><tbody><tr><td>
+						<table width="100%" bgcolor="#eeeedd" border="0" cellpadding="5" cellspacing="0">
+						<tbody><tr>
+							<td>
+							<p><strong><a href="http://web.archive.org/web/20041113171251/http://collective.valve-erc.com/index.php?doc=1080221800-33653000">Creating Your First Character</a></strong><br>
+							<span style="font-size: 9px; color: rgb(128, 128, 128);"><em>27/03/04 09:27am PST</em></span><br>
+							Here is how to create your first character in SOFTIMAGE|XSI.<br>
+							<span style="font-size: 9px; color: rgb(128, 128, 128);"><em>- Geoff "DarkDruid" Bathauer</em></span><br>
+							</p>
+							</td>
+						</tr>
+						</tbody></table>
+						</td></tr></tbody></table>
+
+						<table border="0" cellpadding="0" cellspacing="0">
+						<tbody><tr>
+							<td height="5"><img src="func_tank_files/null.gif" alt="" width="0" border="0" height="0"></td>
+						</tr>
+						</tbody></table>
+						
+						<table width="100%" bgcolor="#c0c0c0" border="0" cellpadding="1" cellspacing="0"><tbody><tr><td>
+						<table width="100%" bgcolor="#eeeedd" border="0" cellpadding="5" cellspacing="0">
+						<tbody><tr>
+							<td>
+							<p><strong><a href="http://web.archive.org/web/20041113171251/http://collective.valve-erc.com/index.php?doc=1075051453-05891900">Dynamic Lighting</a></strong><br>
+							<span style="font-size: 9px; color: rgb(128, 128, 128);"><em>12/03/04 01:29pm PST</em></span><br>
+							A little description of the TE_DLIGHT and how to implement it to monsters attacks.<br>
+							<span style="font-size: 9px; color: rgb(128, 128, 128);"><em>- Jonathan 'Teh_Freak' Smith</em></span><br>
+							</p>
+							</td>
+						</tr>
+						</tbody></table>
+						</td></tr></tbody></table>
+
+						<table border="0" cellpadding="0" cellspacing="0">
+						<tbody><tr>
+							<td height="5"><img src="func_tank_files/null.gif" alt="" width="0" border="0" height="0"></td>
+						</tr>
+						</tbody></table>
+						</p>
+					</td>
+				</tr>
+				</tbody></table>
+				</td></tr></tbody></table>
+					
+			</td>
+			<td width="10"><img src="func_tank_files/null.gif" alt="" width="0" border="0" height="0"></td>
+			<td valign="top" width="520">
+			
+				<table width="100%" bgcolor="#333333" border="0" cellpadding="0" cellspacing="1"><tbody><tr><td>
+				<table width="100%" bgcolor="#ffffef" border="0" cellpadding="0" cellspacing="5">
+				<tbody><tr>
+					<td>
+					
+		<p>
+		<table width="100%" bgcolor="#c0c0c0" border="0" cellpadding="1" cellspacing="0"><tbody><tr><td>
+		<table width="100%" bgcolor="#ddddcc" border="0" cellpadding="5" cellspacing="0">
+		<tbody><tr>
+			<td>
+				<p><strong><a href="http://web.archive.org/web/20041113171251/http://collective.valve-erc.com/index.php?ent=func_tank" class="side" style="color: rgb(51, 51, 51); font-size: 16px; font-family: Arial;">func_tank</a></strong><br>
+				<span style="font-size: 9px; color: rgb(128, 128, 128);"><a href="http://web.archive.org/web/20041113171251/http://collective.valve-erc.com/index.php?area=entity&amp;game=hl&amp;expand=func" style="text-decoration: none;">Half-Life func entity</a><!-- - <a href="/index.php?ent=func_tank" class="side">comments (1)</a> --></span></p>
+			</td>
+			<td align="right"><script> function popup(src){open(src,"","scrollbars=yes,width=400,height=400")} </script><a href="javascript:popup('/popup.php?id=bbe')"><img src="func_tank_files/solid.gif" alt="solid entity" title="solid entity" width="40" border="0" height="32"></a></td>
+		</tr>
+		</tbody></table>
+
+		<table width="100%" bgcolor="#c0c0c0" border="0" cellpadding="0" cellspacing="0">
+		<tbody><tr>
+			<td height="1"><img src="func_tank_files/null.gif" width="0" height="0"></td>
+		</tr>
+		</tbody></table>
+
+		<table width="100%" bgcolor="#eeeedd" border="0" cellpadding="5" cellspacing="0">
+		<tbody><tr>
+			<td><span style="font-weight: bold; font-size: 16px;"><span style="color: rgb(0, 0, 128);">description</span></span><br><br>Use this to create a controlable gun turret.<br><br><span style="font-weight: bold; font-size: 16px;"><span style="color: rgb(0, 0, 128);">usage / properties</span></span><br><br>The
+gun should be created facing angle 0 (in the top view, it should point
+to the right). Use the angle indicator to specify which direction it
+should face in the game.<br><br><p></p><ol><li> The first step is, of
+course, to build the brush model of the gun. It can be anything you
+like, although normally you'd want it to look like some type of gun. It
+is important to note that an origin brush must be included in the
+construction of the gun. An origin brush is a brush covered in the
+ORIGIN texture. Any entity that rotates absolutely *must* have an
+origin brush as part of their makeup.<br><br></li><li> The func_tank
+brush model must be built facing east (to the right in the top view).
+Later, when you turn it into a func_tank, you will set the actual
+facing of the gun in the game by setting the angle value of the entity.<br><br></li><li> Turn the brush model into a func_tank. Select it, and setup its properties.<br><br><table width="100%" bgcolor="#c0c0c0" border="0" cellpadding="1" cellspacing="0"><tbody><tr><td><table width="100%" bgcolor="#eeeeee" border="0" cellpadding="5" cellspacing="0"><tbody><tr><td><li> <strong>targetname</strong> (<em>target_source</em>) Name - The gun must have a unique name. This will be used to control the gun through the func_tankcontrols (see below).<br></li><li> <strong>target</strong> (<em>target_destination</em>)
+Target - The Name (targetname) of an ambient_generic should be
+specified here. This will be the sound the gun makes when fired.<br></li><li> <strong>bullet</strong> (<em>integer</em>) Bullets - Set the bullet type here.<br><br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span style="color: rgb(0, 128, 0);">0 - None (default)</span><br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;1 - 9mm<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;2 - MP5<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;3 - 12mm<br><br></li><li> <strong>barrel</strong> (<em>string</em>) Barrel Length (<em>default: 0</em>) - This is the length from the center of the origin brush to the tip of the barrel.<br></li><li> <strong>barrely</strong> (<em>string</em>) Barrel Horizontal (<em>default: 0</em>) - This is the horizontal distance from the center of the origin brush to the center of the barrel.<br></li><li> <strong>barrelz</strong> (<em>string</em>) Barrel Vertical (<em>default: 0</em>) - This is the vertical distance from the center of the origin brush to the cetner of the barrel.<br></li><li> <strong>bullet_damage</strong> (<em>string</em>) Damage Per Bullet (<em>default: 0</em>) - Set the bullet damage here.<br></li><li> <strong>firerate</strong> (<em>string</em>) Rate of Fire (<em>default: 1</em>) - This is the rate of fire per second.<br></li><li> <strong>master</strong> (<em>string</em>) (Team) Master<br></li><li> <strong>maxRange</strong> (<em>string</em>) Maximum target range (<em>default: 0</em>)<br></li><li> <strong>minRange</strong> (<em>string</em>) Minmum target range (<em>default: 0</em>)<br></li><li> <strong>persistence</strong> (<em>string</em>) Firing persistence (<em>default: 1</em>)
+- This is the firing persistance of the gun. This is really only useful
+for non-user controlled turrets (see below). This will make the gun
+continue to fire for a moment after the player leaves its visibility
+range, rather than being instant on/off.<br></li><li> <strong>pitchrange</strong> (<em>string</em>) Pitch range (<em>default: 0</em>) - This is the range of up/down movement in degrees.<br></li><li> <strong>pitchrate</strong> (<em>string</em>) Pitch rate (<em>default: 0</em>) - This is the speed of the up/down movement of the gun. For a fast feeling, a value of 600 is good.<br></li><li> <strong>pitchtolerance</strong> (<em>string</em>) Pitch tolerance (<em>default: 5</em>)<br></li><li> <strong>rotatesound</strong> (<em>sound</em>) Rotate Sound - Specify the targetname of an ambient_generic here.<br></li><li> <strong>spriteflash</strong> (<em>string</em>)
+Flash Sprite - This is the sprite that will be appended at the end of
+the barrel when the gun is fired, sprites/muzzleflash2.spr for example.<br></li><li> <strong>spritescale</strong> (<em>string</em>) Sprite scale (<em>default: 1</em>) - Use this to set the scale of the sprite, if the default size is not to your liking.<br></li><li> <strong>spritesmoke</strong> (<em>string</em>) Smoke Sprite<br></li><li> <strong>yawrange</strong> (<em>string</em>) Yaw range (<em>default: 180</em>) - This is the range of left/right movement in degrees.<br></li><li> <strong>yawrate</strong> (<em>string</em>) Yaw rate (<em>default: 30</em>) - This is the speed of the left/right movement of the gun. For a fast feeling, a value of 600 is good.<br></li><li> <strong>yawtolerance</strong> (<em>string</em>) Yaw tolerance (<em>default: 15</em>)<br></li><li> <strong>firespread</strong> (<em>integer</em>) Bullet accuracy - Set the bullet accuracy here.<br><br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span style="color: rgb(0, 128, 0);">0 - Perfect Shot (default)</span><br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;1 - Small cone<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;2 - Medium cone<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;3 - Large cone<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;4 - Extra-large cone<br><br></li><li> <script> function popup(src){open(src,"","scrollbars=yes,width=400,height=400")} </script><a href="javascript:popup('/popup.php?id=zhlt_props')"><strong>ZHLT Properties</strong></a><br></li><li> <script> function popup(src){open(src,"","scrollbars=yes,width=400,height=400")} </script><a href="javascript:popup('/popup.php?id=render_props')"><strong>Rendering Properties</strong></a><br></li><li> <strong>globalname</strong> (<em>string</em>) Global Entity Name<br></li><li> <strong>angles</strong> (<em>string</em>) Pitch Yaw Roll (Y Z X) (<em>default: 0 0 0</em>)</li></td></tr></tbody></table></td></tr></tbody></table><br>This entity has the following flags.  Flags can be either <em>on</em> or <em>off</em>.  In the editor, these flags can be accessed in the <em>Flags</em> section of the entity properties.<br><br><table width="100%" bgcolor="#c0c0c0" border="0" cellpadding="1" cellspacing="0"><tbody><tr><td><table width="100%" bgcolor="#eeeeee" border="0" cellpadding="5" cellspacing="0"><tbody><tr><td><li> <strong>1</strong>
+- Active - this will make the gun start active. It is useful for making
+monster controlled turrets. This is unneeded for user controlled
+turrets.<br></li><li> <strong>16</strong> Only Direct - If this gun is
+set to fire automatically (instead of controlled by the user), setting
+this flag will make the gun only fire if the target is in direct line
+of sight.<br></li><li> <strong>32</strong> - Controllable - If this turret is going to be controllable by the user, this flag must be checked.</li></td></tr></tbody></table></td></tr></tbody></table><br></li><li>Create a func_tankcontrols entity just behind the func_tank. Set it to target the Name (targetname) of the func_tank.<br><br></li><li>Place
+a clip brush over the func_tank so the player can't accidentally
+interfere with its movement. This may require a bit of tweaking until
+it is just right. A clip brush is a brush covered in the CLIP texture.
+It is invisible in the game, but blocks player movement. Ammo *will*
+pass through a clip brush, however.<br><br></li><li>If you haven't
+created the ambient_generic that is targeted by the func_tank yet, now
+is the time to do it. A good sound to use for a gun is the
+ambience/biggun1.wav sound. In the flags section of the ambient_generic
+properties, set its radius, and make it 'Start Silent' and 'Not Looped'.</li></ol><br><br><strong>Monster Controlled Turrets</strong><br>In
+various places in Half-Life, you will have seen gun turrets that are
+being controlled by military grunts. These are quite simple to create
+once you have the standard func_tank created.<br><br><p></p><ol><li> Create the func_tank, as above.<br><br></li><li>
+Select the func_tank and press Alt+Enter to bring up its properties.
+Click on the Flags section. The only flags you want checked are
+'Active' and 'Player'.<br><br></li><li> A monster controlled func_tank
+does not require a func_tankcontrols entity, so if one is present (and
+connected to this func_tank) remove it.<br><br>The above are the only diffences in the func_tank, between a normal user controlled func_tank, and a monster controlled version.<br><br></li><li> Now, place the controller. In this example, we'll use a monster_human_grunt. Place it in a position just behind the gun.<br><br></li><li>
+Select the monster and press Alt+Enter to bring up its properties. In
+the TriggerTarget field, enter the Name (targetname) of the func_tank.
+In the Trigger Condition field, select "Death".<br><br></li><li> In the
+monster's Flags properties, place a check beside the Prisoner flag.
+This will make the monster stay by the gun (making it look like he is
+controlling it). Otherwise, the monster will run at you and the gun
+will continue to fire.</li></ol><br><br>When this is placed in the
+level, the grunt (well, the turret) will fire at the player whenever he
+has site of him. Killing the grunt will disable the turret.</td>
+		</tr>
+		</tbody></table>
+
+		
+			<table width="100%" bgcolor="#c0c0c0" border="0" cellpadding="0" cellspacing="0">
+			<tbody><tr>
+				<td height="1"><img src="func_tank_files/null.gif" width="0" height="0"></td>
+			</tr>
+			</tbody></table>
+
+			<table width="100%" bgcolor="#ddddcc" border="0" cellpadding="5" cellspacing="0">
+			<tbody><tr>
+				<td>
+				<strong>related entities</strong>
+				</td>
+			</tr>
+			</tbody></table>
+
+			<table width="100%" bgcolor="#ddddcc" border="0" cellpadding="5" cellspacing="0">
+			<tbody><tr>
+				<td nowrap="nowrap">&nbsp;&nbsp;</td>
+				<td width="100%">
+			<li> <a href="http://web.archive.org/web/20041113171251/http://collective.valve-erc.com/index.php?ent=ambient_generic">ambient_generic</a></li><li> <a href="http://web.archive.org/web/20041113171251/http://collective.valve-erc.com/index.php?ent=func_tankcontrols">func_tankcontrols</a></li><li> <a href="http://web.archive.org/web/20041113171251/http://collective.valve-erc.com/index.php?ent=func_tanklaser">func_tanklaser</a></li><li> <a href="http://web.archive.org/web/20041113171251/http://collective.valve-erc.com/index.php?ent=func_tankmortar">func_tankmortar</a></li><li> <a href="http://web.archive.org/web/20041113171251/http://collective.valve-erc.com/index.php?ent=func_tankrocket">func_tankrocket</a>
+				</li></td>
+			</tr>
+			</tbody></table>
+			
+		
+		
+			<table width="100%" bgcolor="#c0c0c0" border="0" cellpadding="0" cellspacing="0">
+			<tbody><tr>
+				<td height="1"><img src="func_tank_files/null.gif" width="0" height="0"></td>
+			</tr>
+			</tbody></table>
+
+			<table width="100%" bgcolor="#ddddcc" border="0" cellpadding="5" cellspacing="0">
+			<tbody><tr>
+				<td>
+				<strong>attached files</strong>
+				</td>
+			</tr>
+			</tbody></table>
+
+			<table width="100%" bgcolor="#ddddcc" border="0" cellpadding="5" cellspacing="0">
+			<tbody><tr>
+				<td nowrap="nowrap">&nbsp;&nbsp;</td>
+				<td width="100%">
+			<li> <a href="http://web.archive.org/web/20041113171251/http://collective.valve-erc.com/data/entity/1039498899-36484500/entities/func_tank/files/cturret.zip">cturret.zip</a> (10.72KB)</li><li> <a href="http://web.archive.org/web/20041113171251/http://collective.valve-erc.com/data/entity/1039498899-36484500/entities/func_tank/files/gallery.zip">gallery.zip</a> (9.43KB)</li><li> <a href="http://web.archive.org/web/20041113171251/http://collective.valve-erc.com/data/entity/1039498899-36484500/entities/func_tank/files/turret.zip">turret.zip</a> (18.49KB)
+				</li></td>
+			</tr>
+			</tbody></table>
+			
+
+		<table width="100%" bgcolor="#c0c0c0" border="0" cellpadding="0" cellspacing="0">
+		<tbody><tr>
+			<td height="1"><img src="func_tank_files/null.gif" width="0" height="0"></td>
+		</tr>
+		</tbody></table>
+		
+		<table width="100%" bgcolor="#eeeedd" border="0" cellpadding="5" cellspacing="0">
+		<tbody><tr>
+			<td>
+				<span style="color: rgb(128, 128, 128); font-size: 9px;">modified: Mon Jan 27, 2003 / 01:07pm PST<br>this item has been viewed 3374 times</span>
+			</td>
+			<td align="right">
+				<span style="color: rgb(128, 128, 128); font-size: 9px;">[<a href="http://web.archive.org/web/20041113171251/http://collective.valve-erc.com/index.php?area=entity&amp;game=hl&amp;expand=func" class="side">Half-Life</a> ]</span>
+			</td>
+		</tr>
+		</tbody></table>
+		</td></tr></tbody></table>
+		</p>
+		<p align="center"><em>Only registered users can post comments.  Have you <a href="http://web.archive.org/web/20041113171251/http://collective.valve-erc.com/index.php?area=register">registered</a> yet?</em></p>
+				<p><a href="http://web.archive.org/web/20041113171251/http://collective.valve-erc.com/" name="1"></a>
+				<table width="100%" bgcolor="#c0c0c0" border="0" cellpadding="1" cellspacing="0"><tbody><tr><td>
+				<table width="100%" bgcolor="#eeeedd" border="0" cellpadding="5" cellspacing="0">
+				<tbody><tr>
+					<td valign="top" width="20" nowrap="nowrap"><span style="font-size: 9px;">1.</span></td>
+					<td valign="top">
+						<p> <strong><a href="http://web.archive.org/web/20041113171251/http://collective.valve-erc.com/index.php?blog=Cray-X1" class="side">Patrick 'ComCray' Kanne</a></strong><br>
+						<span style="font-size: 10px; color: rgb(128, 128, 128);">Tue Mar 23, 2004 / 06:37pm PST</span></p>
+					</td>
+					<td valign="top" align="right"></td>
+				</tr>
+				<tr>
+					<td>&nbsp;</td>
+					<td colspan="2" width="100%">[on the formatting of this article]<br>due
+to the left margin of the numbered list the right side ot the outlined
+bits (the properties for example) become unreadable, though selecting
+and copypasting it into a text-editor does help its still a tad
+annoying.. (and probably not what you had in mind ;) )<br><br>cray</td>
+				</tr>
+				</tbody></table>
+				</td></tr></tbody></table>
+				</p>
+				
+					</td>
+				</tr>
+				</tbody></table>
+				</td></tr></tbody></table>
+			
+			</td>
+			<td width="10"><img src="func_tank_files/null.gif" alt="" width="0" border="0" height="0"></td>
+		</tr>
+		</tbody></table>
+
+		<table width="100%" border="0" cellpadding="0" cellspacing="0">
+		<tbody><tr>
+			<td align="center" height="10"><img src="func_tank_files/null.gif" alt="" width="0" border="0" height="0"></td>
+		</tr>
+		<tr>
+			<td align="center"><span class="menu">VERC © 2004.  All content copyright its respective owner, all rights reserved.<br>script execution time: 0.158826112747 seconds</span></td>
+		</tr>
+		</tbody></table>
+	
+	</td>
+	<td width="1" bgcolor="#f76b63" height="100%"><img src="func_tank_files/null.gif" alt="" width="0" border="0" height="0"></td>
+</tr>
+</tbody></table>
+
+<script language="JavaScript" src="func_tank_files/jsinclude.html"></script><script language="JavaScript" src="func_tank_files/a"></script><script language="JavaScript" src="func_tank_files/statsHandler.html"></script>
+
+<!-- SOME SCRIPT SRC'S ON THIS PAGE HAVE BEEN REWRITTEN BY THE WAYBACK MACHINE
+OF THE INTERNET ARCHIVE IN ORDER TO PRESERVE THE TEMPORAL INTEGRITY OF THE SESSION. -->
+
+
+<script language="Javascript">
+<!--
+
+// FILE ARCHIVED ON 20041113171251 AND RETRIEVED FROM THE
+// INTERNET ARCHIVE ON 20080622114500.
+// JAVASCRIPT APPENDED BY WAYBACK MACHINE, COPYRIGHT INTERNET ARCHIVE.
+// ALL OTHER CONTENT MAY ALSO BE PROTECTED BY COPYRIGHT (17 U.S.C.
+// SECTION 108(a)(3)).
+
+   var sWayBackCGI = "http://web.archive.org/web/20041113171251/";
+
+   function xResolveUrl(url) {
+      var image = new Image();
+      image.src = url;
+      return image.src;
+   }
+   function xLateUrl(aCollection, sProp) {
+      var i = 0;
+      for(i = 0; i < aCollection.length; i++) {
+         if (typeof(aCollection[i][sProp]) == "string") { 
+          if (aCollection[i][sProp].indexOf("mailto:") == -1 &&
+             aCollection[i][sProp].indexOf("javascript:") == -1) {
+            if(aCollection[i][sProp].indexOf("http") == 0) {
+                aCollection[i][sProp] = sWayBackCGI + aCollection[i][sProp];
+            } else {
+                aCollection[i][sProp] = sWayBackCGI + xResolveUrl(aCollection[i][sProp]);
+            }
+         }
+         }
+      }
+   }
+
+   xLateUrl(document.getElementsByTagName("IMG"),"src");
+   xLateUrl(document.getElementsByTagName("A"),"href");
+   xLateUrl(document.getElementsByTagName("AREA"),"href");
+   xLateUrl(document.getElementsByTagName("OBJECT"),"codebase");
+   xLateUrl(document.getElementsByTagName("OBJECT"),"data");
+   xLateUrl(document.getElementsByTagName("APPLET"),"codebase");
+   xLateUrl(document.getElementsByTagName("APPLET"),"archive");
+   xLateUrl(document.getElementsByTagName("EMBED"),"src");
+   xLateUrl(document.getElementsByTagName("BODY"),"background");
+   var forms = document.getElementsByTagName("FORM");
+   if (forms) {
+       var j = 0;
+       for (j = 0; j < forms.length; j++) {
+              f = forms[j];
+              if (typeof(f.action)  == "string") {
+                 if(typeof(f.method)  == "string") {
+                     if(typeof(f.method) != "post") {
+                        f.action = sWayBackCGI + f.action;
+                     }
+                  }
+              }
+        }
+    }
+
+
+//-->
+</script>
+
+</body></html>
